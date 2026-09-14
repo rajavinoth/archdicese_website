@@ -309,6 +309,22 @@ first-party Next.js support rather than a community runtime. It just needs
 Postgres and object storage first, which is the real production setup and not
 a demo.)
 
+It runs on Render's **free** instance type, which costs nothing and asks for no
+card. Two consequences to know before sending anyone the link: the service
+sleeps after about 15 minutes of no traffic and takes roughly a minute to wake,
+and it has no disk — so anything added through the admin panel lasts until the
+next restart and no longer. For a demo that is an acceptable trade, and it has
+a useful side effect: the site resets itself to known-good content. A
+persistent disk needs a paid instance type; `render.yaml` says how to switch,
+and the environment variables already point the right way.
+
+A static site was considered and is the wrong shape for this. Every image and
+PDF is served by Payload through `/api/media/file/...`, which is a server
+route, so all 194 images and 27 PDFs would 404 until they were re-plumbed into
+`public/` — and that is before losing the admin panel, the search page, the
+contact form and the 270 redirects, all of which need a server. The free web
+service keeps every one of them.
+
 `render.yaml` is a blueprint — Render reads it and creates the service. The
 `Dockerfile` is deliberately one stage: `next start` loads `next.config.ts`,
 which imports the redirect overrides as TypeScript, and the entrypoint runs a

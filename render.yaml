@@ -5,19 +5,35 @@
 # for them instead of reading them from here — they are the two credentials and
 # the site's own address, and none of the three belongs in a repository.
 #
-# The disk is what makes this different from a serverless host. The database is
-# a SQLite file and the uploads are files on disk; without somewhere persistent
-# to keep them, an issue uploaded through the admin panel is gone at the next
-# deploy. A disk requires a paid instance type. To run the demo free instead,
-# delete the `disk:` block and set `plan: free` — everything still works, but
-# the service sleeps when idle and every edit is lost when it wakes.
+# This runs on the free instance type, which means two things worth knowing
+# before anyone is shown the link:
+#
+#   - The service sleeps after about 15 minutes with no traffic, and the next
+#     visitor waits roughly a minute while it wakes. Nothing is broken; it is
+#     just slow to answer the first knock.
+#   - There is no disk. The database and the uploads live on the container's
+#     own filesystem, which is rebuilt from the image whenever the service
+#     restarts — so anything added through the admin panel lasts until then and
+#     no longer. For showing the site that is fine, and it has a useful side
+#     effect: the demo resets itself to known-good content.
+#
+# A persistent disk needs a paid instance type. To switch later, set
+# `plan: starter` and add:
+#
+#     disk:
+#       name: data
+#       mountPath: /data
+#       sizeGB: 1
+#
+# The environment variables below already point at /data, so nothing else
+# changes.
 
 services:
   - type: web
     name: admm-demo
     runtime: docker
     dockerfilePath: ./Dockerfile
-    plan: starter
+    plan: free
 
     # Closest Render region to Chennai.
     region: singapore
@@ -25,17 +41,12 @@ services:
     # Cheap, always 200, and does not touch the database.
     healthCheckPath: /robots.txt
 
-    disk:
-      name: data
-      mountPath: /data
-      # The demo content is about 90 MB — 55 MB of newsletters, 23 MB of
-      # images and a 10 MB database. 1 GB leaves room to upload more.
-      sizeGB: 1
-
     envVars:
-      # The database file and both upload directories live on the disk, and
-      # they have to move together: a row naming a file is worthless if the
-      # file stayed behind in the image.
+      # The database file and both upload directories live together under one
+      # directory, and they have to: a row naming a file is worthless if the
+      # file stayed behind somewhere else. With no disk mounted this is just
+      # the container's own filesystem, which is exactly what makes the demo
+      # reset itself on every restart.
       - key: DATA_DIR
         value: /data
       - key: DATABASE_URI

@@ -37,5 +37,15 @@ fi
 echo "  checking for an administrator account"
 npx payload run scripts/ensure-admin.ts
 
+# Not `npm run start`: that script sets NODE_OPTIONS itself, which would
+# replace whatever is set here rather than add to it.
+#
+# The heap ceiling matters on a 512 MB instance. Left to itself Node sizes its
+# heap from the *machine's* memory, not the container's limit, so it will
+# happily grow past 512 MB and be killed outright — which looks like a random
+# crash with nothing in the log. Told where the ceiling is, it collects garbage
+# harder instead and stays alive.
+export NODE_OPTIONS="--no-deprecation --max-old-space-size=384"
+
 echo "  starting the server"
-exec npm run start
+exec npx next start
