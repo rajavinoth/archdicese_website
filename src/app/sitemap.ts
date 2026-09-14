@@ -25,6 +25,13 @@ import { SITE_URL } from '@/lib/site'
  * ten unpublished posts would otherwise be in here.
  */
 
+/**
+ * Generated at build time, not per request. It already was — both files only
+ * read the database and the environment, and Next.js listed them as static —
+ * but a static export requires that to be stated rather than inferred.
+ */
+export const dynamic = 'force-static'
+
 type Row = { slug: string; updatedAt?: string | null }
 
 /** One sitemap entry per path, with the en/ta pair declared as alternates. */

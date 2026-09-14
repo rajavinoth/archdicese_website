@@ -13,8 +13,37 @@ import { redirectOverrides } from './redirects.overrides'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
+/**
+ * A static export, for publishing the site to GitHub Pages as a look-and-feel
+ * demo. See scripts/export-static.mjs, which sets this and takes the pieces
+ * that cannot be exported out of the way first.
+ *
+ * What a static build gives up, and why: there is no server, so the admin
+ * panel, the Payload API, the search page and the contact form all go. What
+ * remains is every page a visitor reads, which is the part being demonstrated.
+ */
+const STATIC = process.env.STATIC_EXPORT === '1'
+
+/**
+ * GitHub Pages serves a project repository under /<repo>/ rather than at the
+ * root. Next.js prefixes its own links and assets with this; the files Payload
+ * serves are handled separately, in the export script, because their addresses
+ * come out of the database and Next.js has never seen them.
+ */
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.replace(/\/+$/, '') || ''
+
 const nextConfig: NextConfig = {
+  ...(STATIC ? { output: 'export' as const } : {}),
+  ...(basePath ? { basePath, assetPrefix: basePath } : {}),
   images: {
+    /**
+     * A static export has no server to resize images on demand, so they are
+     * served exactly as they were uploaded. The gallery photographs are 150px
+     * thumbnails and the newsletter covers are already small, so this costs
+     * less here than it would on most sites.
+     */
+    ...(STATIC ? { unoptimized: true } : {}),
+
     /**
      * Declaring `localPatterns` at all turns next/image into an allowlist:
      * anything not matched here is refused outright, with a 500 rather than a
@@ -30,9 +59,30 @@ const nextConfig: NextConfig = {
   },
   turbopack: {
     root: path.resolve(dirname),
+
+    /**
+     * The contact form submits through a server action, and a static export
+     * cannot build one — there would be nothing at the other end to receive
+     * it. Swapping the component here rather than branching inside the page
+     * keeps the substitution in one place: the real build never sees the stub,
+     * the static build never sees the action, and the contact page itself is
+     * unaware that either happened.
+     */
+    ...(STATIC
+      ? {
+          resolveAlias: {
+            '@/components/ContactForm': './src/components/ContactFormStatic.tsx',
+          },
+        }
+      : {}),
   },
 
   async redirects() {
+    // A static host has nothing to run these on. The old URLs simply 404 on
+    // the demo; on the real deployment they are the reason the archdiocese
+    // keeps its search rankings.
+    if (STATIC) return []
+
     // Overrides first: Next.js uses the first matching rule, and these exist
     // precisely to win against the mechanically generated mapping.
     return [...redirectOverrides, ...legacyRedirects]

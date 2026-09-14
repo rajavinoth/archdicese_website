@@ -206,6 +206,8 @@ type Dictionary = {
     findOnMap: string
     topics: Record<'general' | 'certificate' | 'mass' | 'parish' | 'website', string>
     errors: Record<'name' | 'email' | 'emailInvalid' | 'subject' | 'message' | 'tooFast' | 'failed', string>
+    /** Shown in place of the form on the static preview, which cannot send. */
+    previewNotice: string
   }
   archbishop: {
     title: string
@@ -487,6 +489,8 @@ const en: Dictionary = {
       failed:
         'Sorry — the message could not be saved. Please email abpmmsec@gmail.com directly.',
     },
+    previewNotice:
+      'This is a preview of the website’s design, and the contact form is not connected on it — a message sent here would reach nobody. Please use the telephone number or the address on this page.',
   },
   archbishop: {
     title: 'The Archbishop',
@@ -770,6 +774,8 @@ const ta: Dictionary = {
       failed:
         'மன்னிக்கவும் — செய்தியைச் சேமிக்க முடியவில்லை. abpmmsec@gmail.com க்கு நேரடியாக மின்னஞ்சல் அனுப்புங்கள்.',
     },
+    previewNotice:
+      'இது இணையதளத்தின் வடிவமைப்பு முன்னோட்டம்; இதில் தொடர்புப் படிவம் இணைக்கப்படவில்லை — இங்கு அனுப்பும் செய்தி யாரையும் சென்றடையாது. இப்பக்கத்தில் உள்ள தொலைபேசி எண்ணையோ முகவரியையோ பயன்படுத்துங்கள்.',
   },
   archbishop: {
     title: 'பேராயர்',
@@ -861,10 +867,21 @@ export const fill = (
  *
  * @param path language-neutral path, e.g. '/clergy' or '/clergy/alexander-a'
  */
+/**
+ * When the site is served from a subdirectory rather than from the root of a
+ * domain — which is how GitHub Pages serves a project repository — every path
+ * below needs that prefix. Next.js adds it to links and assets on its own, but
+ * these go into `<link rel="canonical">` and the hreflang tags, which it does
+ * not touch: the canonical would point at the wrong site entirely.
+ *
+ * Empty on the real deployment, where the site is at the root of its domain.
+ */
+const BASE = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/+$/, '')
+
 export const alternatesFor = (path: string, locale: Locale) => ({
-  canonical: localePath(path, locale),
+  canonical: `${BASE}${localePath(path, locale)}`,
   languages: {
-    'en-IN': localePath(path, 'en'),
-    'ta-IN': localePath(path, 'ta'),
+    'en-IN': `${BASE}${localePath(path, 'en')}`,
+    'ta-IN': `${BASE}${localePath(path, 'ta')}`,
   },
 })

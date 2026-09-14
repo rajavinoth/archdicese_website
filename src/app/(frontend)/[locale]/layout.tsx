@@ -156,14 +156,23 @@ export default async function LocaleLayout({
                 </ul>
               </nav>
 
-              <SearchForm
-                locale={locale}
-                id="header-search"
-                label={t.search.title}
-                placeholder={t.search.placeholder}
-                submit={t.search.submit}
-                compact
-              />
+              {/*
+                Search needs a server to read the query string, so the static
+                preview has no /search page. The box is hidden there rather
+                than left in place: a search field that takes a question and
+                answers with "page not found" is worse than no search field,
+                and on a preview it would read as the site being broken.
+              */}
+              {process.env.STATIC_EXPORT !== '1' && (
+                <SearchForm
+                  locale={locale}
+                  id="header-search"
+                  label={t.search.title}
+                  placeholder={t.search.placeholder}
+                  submit={t.search.submit}
+                  compact
+                />
+              )}
 
               <LanguageSwitcher current={locale} label={t.common.switchLanguage} />
             </div>

@@ -45,7 +45,15 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/conta
         {/* Form */}
         <section>
           <h2 className="text-lg font-semibold">{t.contact.sendMessage}</h2>
-          <p className="mt-1 text-sm text-slate-600">{t.contact.requiredNote}</p>
+          {/*
+            The static export swaps the form for a notice — a server action has
+            nothing to submit to — and "fields marked * are required" above a
+            page with no fields reads as a fault in the site rather than as the
+            deliberate limit of a preview.
+          */}
+          {process.env.STATIC_EXPORT !== '1' && (
+            <p className="mt-1 text-sm text-slate-600">{t.contact.requiredNote}</p>
+          )}
 
           <div className="mt-6">
             <ContactForm

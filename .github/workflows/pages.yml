@@ -1,0 +1,80 @@
+# Publishes the look-and-feel preview to GitHub Pages.
+#
+# This is not the website. It is every page a visitor reads, built as plain
+# files — no admin panel, no search, and a contact form that says so rather
+# than pretending to send. See scripts/export-static.mjs for what is taken out
+# and why, and README.md for the deployment that keeps all of it.
+#
+# Before the first run, set the repository's Pages source to "GitHub Actions"
+# under Settings > Pages. Without that this workflow builds happily and
+# publishes nothing.
+
+name: Preview on GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # A button on the Actions tab, for republishing without a commit.
+  workflow_dispatch:
+
+# Lets the deploy step publish. `contents: read` is stated explicitly because
+# setting any permission replaces the whole default set.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One publish at a time. `cancel-in-progress: false` because cancelling a
+# half-finished deploy is how a site ends up serving a mixture of two builds.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Before the build, not after: it is what tells the build where the site
+      # will live. A project repository is served from /<repo>/ and an account
+      # site from the root, and getting that wrong means every image, stylesheet
+      # and link points one directory too high.
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Build the static export
+        env:
+          # Both come from the step above, so nothing here needs editing if the
+          # repository is renamed, forked, or turned into an account site.
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_SERVER_URL: ${{ steps.pages.outputs.origin }}
+          # Keeps a public copy of a real archdiocese's website out of search
+          # results — it would otherwise compete with the archdiocese's own
+          # pages, with nothing to tell a searcher which was which.
+          DEMO_NOINDEX: '1'
+        run: npm run export:static
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

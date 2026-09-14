@@ -65,6 +65,7 @@ npm run dev
 | `npm run newsletter:import` | Download the newsletter issues onto this site (this year and last by default) |
 | `npm run videos:import`     | Rebuild the video gallery from the ids the old page embedded |
 | `npm run albums:import`     | Recover the photo albums, and repair the photographs' alt text |
+| `npm run export:static`     | Build the site as plain files in `out/`, for GitHub Pages |
 | `npm run demo:prepare`      | Build `demo-data/diocese.db` — the database with every priest's personal detail emptied out, safe to commit |
 | `npm run content:tidy`      | Clear WordPress's justified alignment and decode leftover HTML entities |
 | `npm run archbishop:import` | Load the Archbishop page from the archdiocese's corrected document |
@@ -295,6 +296,92 @@ In development that was harmless — everything is reproducible from
 **On production it would destroy content.** Before making a schema change to a
 live database, generate a real migration (`payload migrate:create`) that copies
 existing values into the new locale tables, and turn `push` off.
+
+## The GitHub Pages preview (free, no card, no server)
+
+`npm run export:static` builds the site as plain files in `out/`, and
+`.github/workflows/pages.yml` publishes them to GitHub Pages on every push to
+`main`. Set the repository's Pages source to **GitHub Actions** under
+Settings > Pages before the first run, or the workflow builds happily and
+publishes nothing.
+
+**This is a preview of the design, not the site.** Three things need a server
+and are therefore not in it:
+
+- **the admin panel**, and the whole Payload API with it
+- **search**, which reads the query string on the server. The header's search
+  box is hidden rather than left in place — a search field that answers every
+  question with "page not found" reads as a broken site
+- **the contact form**, which submits through a server action. It is replaced
+  by a notice saying so, in both languages, pointing at the telephone number
+  and address already on the page. A form that looks like it works and quietly
+  discards what someone typed is worse than no form, and people writing to a
+  diocese are usually writing about something that matters to them
+
+The 270 redirects from the old site's URLs also do nothing here; a static host
+has nothing to run them on.
+
+### What the export has to do around the build
+
+`scripts/export-static.mjs`, and each step is there because something broke
+without it:
+
+1. **The Payload routes are moved out of the way.** `output: 'export'` refuses
+   to build a route handler, and Payload's API is nothing but route handlers.
+   They are put back afterwards whether the build succeeds or fails — a failed
+   export must not leave the repository without its admin panel.
+2. **`.next` is deleted first.** Next.js keeps a generated list of every route,
+   and if it still names the routes just moved aside, the type check fails on
+   modules that are no longer there.
+3. **The uploads are copied to where their addresses say they are.** Payload
+   serves them from `/api/media/file/...`, which is a server route; on a static
+   host they have to exist as files at that path. 194 images and 27 PDFs.
+4. **English is lifted out of `en/` and up to the root.** This is the one worth
+   remembering. English lives at `/clergy` and Tamil at `/ta/clergy`, which
+   `src/proxy.ts` arranges by rewriting `/clergy` to `/en/clergy`. A static host
+   runs no proxy — so the export writes `out/en/clergy` while every link on
+   every page still says `/clergy`, and **the entire English site 404s**. Tamil
+   already carries its prefix in both places and is left alone.
+5. **Asset addresses are prefixed** when the site is served from a
+   subdirectory. See below.
+
+The contact form is swapped for its static stand-in through a Turbopack alias
+in `next.config.ts` rather than a branch inside the page: the real build never
+sees the stub, the static build never sees the server action, and the contact
+page is unaware that either happened.
+
+### A project repository is served from a subdirectory
+
+GitHub Pages serves `github.com/you/repo` at `you.github.io/repo/`, so every
+absolute path needs that prefix. The workflow reads it from
+`actions/configure-pages`, which means nothing needs editing if the repository
+is renamed, forked, or turned into an account site — where the prefix is
+correctly empty.
+
+Next.js prefixes its own links and assets. Two things it does not:
+
+- **`/brand/seal.png`** — the archdiocesan seal, in the header and footer of
+  every page. It is referenced by a literal path rather than an import, so
+  nothing rewrites it, and without this the site loses its logo everywhere.
+  Found by serving the export under a subdirectory and checking every reference
+  on the page, which is the only way it shows up.
+- **`<link rel="canonical">` and the hreflang tags**, which are built by
+  `alternatesFor()` in src/lib/i18n.ts. A canonical missing the prefix points
+  at a different site entirely. That helper now includes it.
+
+### Verified, not assumed
+
+The export was served under a simulated `/<repo>/` prefix and checked: 22 key
+paths answered 200, a missing page answered 404, and all 37 paths referenced by
+the homepage resolved. The photo gallery's viewer opens and loads its image,
+the Media menu's links carry the prefix, and the video gallery still ships
+**no** `<iframe>` — nothing is requested from YouTube until someone presses
+play, exactly as on the server build.
+
+An earlier run of that check reported every path as 200 including ones that do
+not exist. `serve -s` was rewriting every unknown path to the homepage, so the
+test could not fail. The control request for a deliberately missing page is
+there to catch that.
 
 ## The demo deployment (Render)
 

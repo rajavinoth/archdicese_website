@@ -17,6 +17,11 @@
 /.next/
 /out/
 
+# Where scripts/export-static.mjs parks the server-only routes while it runs.
+# It puts them back; if a build is interrupted, `git status` will show them
+# missing from src/ and they can be moved back by hand.
+/.export-stash/
+
 # production
 /build
 

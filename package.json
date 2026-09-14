@@ -43,7 +43,8 @@
     "videos:import:dry": "cross-env VIDEOS_DRY=1 NODE_OPTIONS=--no-deprecation payload run scripts/videos-import.ts",
     "albums:import": "cross-env NODE_OPTIONS=--no-deprecation payload run scripts/albums-import.ts",
     "albums:import:dry": "cross-env ALBUMS_DRY=1 NODE_OPTIONS=--no-deprecation payload run scripts/albums-import.ts",
-    "demo:prepare": "node scripts/demo-copy.mjs && cross-env DATABASE_URI=file:./demo-data/diocese.db payload run scripts/demo-prepare.ts && node scripts/demo-scrub.mjs"
+    "demo:prepare": "node scripts/demo-copy.mjs && cross-env DATABASE_URI=file:./demo-data/diocese.db payload run scripts/demo-prepare.ts && node scripts/demo-scrub.mjs",
+    "export:static": "node scripts/export-static.mjs"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.89.0",

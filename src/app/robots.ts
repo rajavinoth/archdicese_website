@@ -24,6 +24,13 @@ import { SITE_URL } from '@/lib/site'
  * a page linked from elsewhere can still be listed. The other half is the
  * `noindex` header in the layout's metadata, which does prevent listing.
  */
+/**
+ * Generated at build time, not per request. It already was — both files only
+ * read the database and the environment, and Next.js listed them as static —
+ * but a static export requires that to be stated rather than inferred.
+ */
+export const dynamic = 'force-static'
+
 const NOINDEX = process.env.DEMO_NOINDEX === '1'
 
 export default function robots(): MetadataRoute.Robots {
