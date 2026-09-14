@@ -65,6 +65,7 @@ npm run dev
 | `npm run newsletter:import` | Download the newsletter issues onto this site (this year and last by default) |
 | `npm run videos:import`     | Rebuild the video gallery from the ids the old page embedded |
 | `npm run albums:import`     | Recover the photo albums, and repair the photographs' alt text |
+| `npm run demo:prepare`      | Build `demo-data/diocese.db` — the database with every priest's personal detail emptied out, safe to commit |
 | `npm run content:tidy`      | Clear WordPress's justified alignment and decode leftover HTML entities |
 | `npm run archbishop:import` | Load the Archbishop page from the archdiocese's corrected document |
 | `npm run translation:apply` | Write the Tamil translations into the `ta` locale      |
@@ -294,6 +295,107 @@ In development that was harmless — everything is reproducible from
 **On production it would destroy content.** Before making a schema change to a
 live database, generate a real migration (`payload migrate:create`) that copies
 existing values into the new locale tables, and turn `push` off.
+
+## The demo deployment (Render)
+
+A demo runs on Render rather than on Vercel or Netlify, and the reason is the
+filesystem. This site keeps its database in a SQLite **file** and its uploads
+as **files on disk** — 23 MB of images and 55 MB of PDFs. A serverless host
+gives each invocation a read-only, throw-away filesystem, so the admin panel
+would appear to work and then lose every change, and no upload would ever
+succeed. Render runs a container with a mounted disk, where all three simply
+work. (Of the two the question was originally about, Vercel is the better:
+first-party Next.js support rather than a community runtime. It just needs
+Postgres and object storage first, which is the real production setup and not
+a demo.)
+
+`render.yaml` is a blueprint — Render reads it and creates the service. The
+`Dockerfile` is deliberately one stage: `next start` loads `next.config.ts`,
+which imports the redirect overrides as TypeScript, and the entrypoint runs a
+Payload script, which loads everything under `src/`. A trimmed runtime image
+has to list every one of those files, and a missing one fails inside a
+deployed container, which is the worst place to find out.
+
+### The database had to be sanitised first, and the reason is not obvious
+
+The site is careful with clergy contact details. Every priest's email,
+telephone, home address and date of birth sits behind a `contactPublic`
+checkbox, that checkbox is off for all 104 of them, and the field-level access
+rules mean the public pages never render any of it. That part is correct and
+was correct before any of this.
+
+None of it helps here. Access control runs when *Payload* reads a row, and
+there is no Payload between `git clone` and a reader with a SQLite browser. A
+committed `diocese.db` publishes every column in it. That is how a site which
+carefully hides 46 priests' home addresses ends up publishing 46 priests' home
+addresses — through the demo, not through the site.
+
+So `npm run demo:prepare` builds a separate database:
+
+1. `scripts/demo-copy.mjs` copies it with SQLite's own `VACUUM INTO`, not a
+   file copy — recent writes live in a write-ahead log, and a plain copy can
+   miss them.
+2. `scripts/demo-prepare.ts` empties the contact fields of every priest not
+   marked public, deletes the contact-form submissions, and deletes every
+   account. It refuses to run unless `DATABASE_URI` names the copy, because
+   pointing it at the real database would destroy contact details that took a
+   while to parse out of the curia's letter.
+3. `scripts/demo-scrub.mjs` does what the first two cannot.
+
+That third step is the one worth remembering. Clearing a field through Payload
+clears the current record and nothing else; `Clergy` has drafts enabled, so
+every past edit is still in `_clergy_v`. **419 version rows still held an email
+address, a telephone number and a home address, and 410 held a date of birth,
+after the visible records had been emptied and looked clean.** Version rows are
+not reachable through the Local API, so that step goes through SQL, and it ends
+by re-checking every table and exiting non-zero if anything is left.
+
+### No account is committed either
+
+The demo database ships with **no users at all**. A password hash in a
+committed file is published to anyone who can clone the repository, and
+guessing at a hash offline has no rate limit.
+
+That leaves one hazard, which `scripts/ensure-admin.ts` exists to close: Payload
+offers a "create the first user" screen when a project has no accounts — right
+on a laptop, wrong on a public address, where the first stranger to find
+`/admin` becomes the administrator of a real archdiocese's website. The
+entrypoint runs that script before the server starts, and it exits non-zero if
+`ADMIN_EMAIL` and `ADMIN_PASSWORD` are not set. A container that will not boot
+is a visible failure; an open sign-up page is an invisible one.
+
+### The demo is not indexed
+
+`DEMO_NOINDEX=1` makes `robots.txt` disallow everything and adds a `noindex`
+header to every page. Both are needed: robots.txt stops a crawler fetching a
+page, but a page linked from somewhere else can still be listed without ever
+being fetched — only the header prevents that. A public copy of a real
+archdiocese's website is a second site with the same content, competing with
+the archdiocese's own pages, and someone who found it in a search result would
+have no way of knowing it was not the real one. It stays readable by anyone
+with the link, which is what a demo is for.
+
+### Two things that were nearly shipped
+
+- **`.gitignore` was excluding the demo database.** The rule read `diocese.db`
+  with no leading slash, and git matches an unanchored name at every level — so
+  it silently excluded `demo-data/diocese.db` as well. The build would have
+  produced a site with no content and nothing to say why. It is `/diocese.db`
+  now.
+- The version-history leak above, which looked clean from every direction
+  except SQL.
+
+### What the demo still has in it, on purpose
+
+The **sample mass timings**. They are invented, and the site says so wherever
+they appear — a banner on the parish pages and a note in the finder. Clearing
+them (`npm run timings:sample clear`) would leave the parish finder, which is
+the most substantial thing here, with nothing to demonstrate. The trade is
+deliberate: labelled sample data on a page nobody can find by searching. Before
+anything real is launched, they go.
+
+The **archdiocesan office address, telephone and email** also remain. Those the
+old site published on its own contact page.
 
 ## Going to production
 
