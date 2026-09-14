@@ -1,0 +1,108 @@
+{
+  "source": {
+    "document": "Archdiocese of Madras-Mylapore — Change of Assignments & Appointments 2026",
+    "reference": "ADMM/ASN/01/2026",
+    "dated": "2026-05-01",
+    "effective": "on or before 2026-06-01",
+    "signedBy": "Most Rev. Dr. George Antonysamy, Archbishop of Madras-Mylapore",
+    "countersignedBy": "Rev Fr J Edward Antony Raj, Chancellor",
+    "url": "https://archdioceseofmadrasmylapore.in/wp-content/uploads/2026/05/2026-TRANSFER-LIST.pdf",
+    "note": "The PDF is a scan with no text layer. These entries were transcribed by reading the rendered pages at 2x, NOT by OCR. Every record written from this file is flagged for review so a human can check it against the original."
+  },
+
+  "_congregations": "Some appointments name a religious congregation rather than a priest (SCJ, SDM, MMI, IVD, Guanellian, 'Religious'). They are kept here for completeness with congregation:true and are never turned into clergy records.",
+
+  "parishPriests": [
+    { "place": "Adyar", "priest": "Rev Fr S X Amalraj" },
+    { "place": "Ambattur", "priest": "Rev Fr MLA Maria John Bosco" },
+    { "place": "Bharathiyar Nagar", "priest": "Rev Fr B Stephen" },
+    { "place": "Chintadripet", "priest": "Rev Fr L Antony Doss" },
+    { "place": "Choolai", "priest": "Rev Fr P A Francis Xavier" },
+    { "place": "Gandhi Nagar", "priest": "Rev Fr Jude Pragasam" },
+    { "place": "George Town - Assumption", "priest": "Rev Fr Arockia Velankanni Stalin" },
+    { "place": "Gummidipoondi", "priest": "Rev Fr K M Allwin" },
+    { "place": "Guindy", "priest": "Rev Fr D Andrew" },
+    { "place": "K G Kandigai", "priest": "Rev Fr L Dyson Raja Rathinam" },
+    { "place": "Lakshmipuram", "priest": "Rev Fr G A Arulappan" },
+    { "place": "Maduravoyal", "priest": "Rev Fr M Balasamy" },
+    { "place": "Minjur", "priest": "Rev Fr Joseph Albert" },
+    { "place": "Muthapudupet", "priest": "SCJ", "congregation": true },
+    { "place": "Nammalwarpet", "priest": "Rev Fr Geo Patrick" },
+    { "place": "Porur", "priest": "Rev Fr Patrick I Joseph" },
+    { "place": "Roshanagaram", "priest": "Rev Fr O J Christhu Raj" },
+    { "place": "Royapettah", "priest": "Rev Fr Perianagaya Irudayaraj" },
+    { "place": "Sathyamoorthy Nagar", "priest": "Religious", "congregation": true },
+    { "place": "Sevvapet", "priest": "Rev Fr L Charles Anandaraj" },
+    { "place": "Susaipuram", "priest": "Rev Fr A John Andrew" },
+    { "place": "Thiruvalangadu", "priest": "Rev Fr I Semon Sylvester" },
+    { "place": "Thiruvottiyur", "priest": "Rev Fr Raymond Peter" },
+    { "place": "Thozhudavur", "priest": "Rev Fr R Varun Richard" },
+    { "place": "Tondiarpet", "priest": "Rev Fr M V Jacob" },
+    { "place": "Uthukottai", "priest": "Rev Fr L Albert Jude" },
+    { "place": "Veppampattu", "priest": "Rev Fr A Johnson" },
+    { "place": "Villivakkam", "priest": "Rev Fr P A Jacob" }
+  ],
+
+  "assistantParishPriests": [
+    { "place": "Anna Nagar", "priest": "Rev Fr S Joseph George Louis" },
+    { "place": "Avadi", "priest": "Rev Fr Santhiya Philomone CSC" },
+    { "place": "Besant Nagar", "priest": "Rev Fr G Jeswin Raj" },
+    { "place": "Besant Nagar", "priest": "Guanellian", "congregation": true },
+    { "place": "Chinmaya Nagar", "priest": "Rev Fr M Antony Anand" },
+    { "place": "Choolai", "priest": "SDM", "congregation": true },
+    { "place": "Egmore", "priest": "Rev Fr T Samuel Richard" },
+    { "place": "Erukkanchery", "priest": "Rev Fr S Thomas Deepak" },
+    { "place": "K G Kandigai", "priest": "Rev Fr S Antony Rozrio Joshwa" },
+    { "place": "Kamaraj Nagar", "priest": "Rev Fr Martin Innaiah OMD" },
+    { "place": "Kasimode", "priest": "Rev Fr K Akash Raj" },
+    { "place": "Kodambakkam", "priest": "Rev Fr Sundar HGN" },
+    { "place": "Kilpauk", "priest": "Rev Fr L Anto Idhaya Jenish" },
+    { "place": "Little Mount", "priest": "Rev Fr A Antony Jerald" },
+    { "place": "Luz", "priest": "Rev Fr G J Jasper" },
+    { "place": "Maduravoyal", "priest": "Rev Fr Y Deepak Raj" },
+    { "place": "Nazareth Nagar", "priest": "SDM", "congregation": true },
+    { "place": "Nesapakkam", "priest": "Rev Fr V Andrew Thomas" },
+    { "place": "Nungambakkam", "priest": "Rev Fr K P Titu" },
+    { "place": "Pattabiram", "priest": "MMI", "congregation": true },
+    { "place": "Peravallur", "priest": "Rev Fr V Amarnath" },
+    { "place": "Porur", "priest": "MMI", "congregation": true },
+    { "place": "Puzhal", "priest": "Rev Fr Antony Lawrence JDH" },
+    { "place": "Raja Annamalaipuram", "priest": "Rev Fr V Vivek Leveil De Rossi" },
+    { "place": "Royapuram - Mater Dol", "priest": "IVD", "congregation": true },
+    { "place": "Santhome", "priest": "Rev Fr S Maria Antony Robinston" },
+    { "place": "Santhome", "priest": "Guanellian", "congregation": true },
+    { "place": "Sastri Nagar", "priest": "Rev Fr A Micheal Andrews" },
+    { "place": "Srinivasa Nagar", "priest": "Rev Fr A Maria Soosai" },
+    { "place": "Thiruvottiyur", "priest": "Rev Fr A J Thomas Antony" },
+    { "place": "Tondiarpet", "priest": "Rev Fr Helson Vishal OMD" },
+    { "place": "Velachery", "priest": "Rev Fr R Antony Jayakumar" },
+    { "place": "Vepery - St Joseph's", "priest": "Rev Fr R Christopher" }
+  ],
+
+  "specialMinistries": [
+    { "role": "Superintendent of RC Schools", "priest": "Rev Fr Leo Joseph" },
+    { "role": "MSSS", "priest": "Rev Fr Victor Ramesh" },
+    { "role": "Financial Administrator — Besant Nagar", "priest": "Rev Fr T Swaminathan" },
+    { "role": "Assistant to Director — Pastoral Centre", "priest": "Rev Fr A Ritchie Vincent" },
+    { "role": "Sacred Heart Seminary — Poonamallee", "priest": "Rev Fr S Alexraj" },
+    { "role": "Rector — Propaedeutic Seminary, Poonamallee", "priest": "Rev Fr Charles David Immanuel" },
+    {
+      "role": "Priest In-charge — Infant Jesus Formation House, Santhome (addition to the present office)",
+      "priest": "Rev Fr J Edward Antony Raj"
+    },
+    { "role": "Bible Commission", "priest": "Rev Fr A Premraj" },
+    { "role": "Catechetical Commission", "priest": "Rev Fr A Maria Devanesan" },
+    { "role": "Family Commission", "priest": "Rev Fr A Maria Devanesan" },
+    { "role": "Youth Commission", "priest": "Rev Fr A Mariya Prem Anbarasan" },
+    { "role": "Seafarers Welfare Association", "priest": "Rev Fr B Anthony" }
+  ],
+
+  "higherStudies": [
+    { "priest": "Rev Fr S Ronald Richard", "study": "Pastoral Theology, Milan" },
+    { "priest": "Rev Fr P K Alex Sagayaraj", "study": "Spirituality and Counselling, Pune" }
+  ],
+
+  "onLeave": ["Rev Fr Jose V Thomas", "Rev Fr Antony Pancras", "Rev Fr Daniel Simonraj"],
+
+  "retirement": ["Rev Fr M S Arputhasamy"]
+}

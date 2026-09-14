@@ -1,0 +1,50 @@
+{
+  "source": {
+    "document": "Archdiocese of Madras-Mylapore — Change of Assignments & Appointments 2026",
+    "reference": "ADMM/ASN/01/2026",
+    "dated": "2026-05-01",
+    "signedBy": "Most Rev. Dr. George Antonysamy, Archbishop of Madras-Mylapore",
+    "countersignedBy": "Rev Fr J Edward Antony Raj, Chancellor",
+    "url": "https://archdioceseofmadrasmylapore.in/wp-content/uploads/2026/05/2026-TRANSFER-LIST.pdf",
+    "section": "VII — VICARS FORANE",
+    "note": "The PDF is a scan with no text layer, so these entries were transcribed by reading the rendered pages rather than by OCR. Re-check against the original before launch."
+  },
+  "deaneries": [
+    {
+      "name": "Deanery of St Thomas, the Apostle",
+      "slug": "st-thomas-the-apostle",
+      "seat": "Santhome",
+      "deanName": "Rev Fr E Arulappa"
+    },
+    {
+      "name": "Deanery of St John the Baptist",
+      "slug": "st-john-the-baptist",
+      "seat": "Nungambakkam",
+      "deanName": "Rev Fr D F Don Bosco"
+    },
+    {
+      "name": "Deanery of the Sacred Heart of Jesus",
+      "slug": "sacred-heart-of-jesus",
+      "seat": "Egmore",
+      "deanName": "Rev Fr Peter Jerald"
+    },
+    {
+      "name": "Deanery of St Jude",
+      "slug": "st-jude",
+      "seat": "Minjur",
+      "deanName": "Rev Fr N Sekar"
+    },
+    {
+      "name": "Deanery of St Antony",
+      "slug": "st-antony",
+      "seat": "Guindy",
+      "deanName": "Rev Fr J Joseph Arockia Jayakumar"
+    },
+    {
+      "name": "Deanery of St Theresa of Child Jesus",
+      "slug": "st-theresa-of-child-jesus",
+      "seat": "Thiruvottiyur",
+      "deanName": "Rev Fr M V Jacob"
+    }
+  ]
+}

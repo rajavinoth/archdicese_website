@@ -1,0 +1,68 @@
+# Render blueprint for the demo.
+#
+# Create it from this file with Render's "New > Blueprint" and point it at the
+# repository. Three variables are marked `sync: false`, which means Render asks
+# for them instead of reading them from here — they are the two credentials and
+# the site's own address, and none of the three belongs in a repository.
+#
+# The disk is what makes this different from a serverless host. The database is
+# a SQLite file and the uploads are files on disk; without somewhere persistent
+# to keep them, an issue uploaded through the admin panel is gone at the next
+# deploy. A disk requires a paid instance type. To run the demo free instead,
+# delete the `disk:` block and set `plan: free` — everything still works, but
+# the service sleeps when idle and every edit is lost when it wakes.
+
+services:
+  - type: web
+    name: admm-demo
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+
+    # Closest Render region to Chennai.
+    region: singapore
+
+    # Cheap, always 200, and does not touch the database.
+    healthCheckPath: /robots.txt
+
+    disk:
+      name: data
+      mountPath: /data
+      # The demo content is about 90 MB — 55 MB of newsletters, 23 MB of
+      # images and a 10 MB database. 1 GB leaves room to upload more.
+      sizeGB: 1
+
+    envVars:
+      # The database file and both upload directories live on the disk, and
+      # they have to move together: a row naming a file is worthless if the
+      # file stayed behind in the image.
+      - key: DATA_DIR
+        value: /data
+      - key: DATABASE_URI
+        value: file:/data/diocese.db
+
+      # Keeps a public copy of a real archdiocese's website out of search
+      # results. See src/app/robots.ts.
+      - key: DEMO_NOINDEX
+        value: '1'
+
+      # Signs login tokens. Generated once by Render and kept, so that a
+      # redeploy does not log everyone out.
+      - key: PAYLOAD_SECRET
+        generateValue: true
+
+      # The administrator, created on first boot by scripts/ensure-admin.ts.
+      # The container refuses to start without them, on purpose: with no
+      # account and no credentials, Payload would offer its "create the first
+      # user" screen to whoever opened /admin first.
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+
+      # The site's own address, e.g. https://admm-demo.onrender.com — Render
+      # only knows it once the service exists. It is read while the pages are
+      # being built, so set it and redeploy once, or the sitemap and the
+      # structured data on every page will say localhost.
+      - key: NEXT_PUBLIC_SERVER_URL
+        sync: false

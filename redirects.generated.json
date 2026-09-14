@@ -1,0 +1,1372 @@
+[
+  {
+    "source": "/home",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/contact-us",
+    "destination": "/contact",
+    "permanent": true
+  },
+  {
+    "source": "/calendar",
+    "destination": "/events",
+    "permanent": true
+  },
+  {
+    "source": "/shrine-3",
+    "destination": "/parishes",
+    "permanent": true
+  },
+  {
+    "source": "/fr-alexander-a",
+    "destination": "/clergy/alexander-a",
+    "permanent": true
+  },
+  {
+    "source": "/fr-henry-felix-a",
+    "destination": "/clergy/henry-felix-a",
+    "permanent": true
+  },
+  {
+    "source": "/fr-greith-mathews-t",
+    "destination": "/clergy/greith-mathews-t",
+    "permanent": true
+  },
+  {
+    "source": "/fr-gerard-majella-d",
+    "destination": "/clergy/gerard-majella-d",
+    "permanent": true
+  },
+  {
+    "source": "/fr-gilbert-joe",
+    "destination": "/clergy/gilbert-joe",
+    "permanent": true
+  },
+  {
+    "source": "/fr-geo-patrick",
+    "destination": "/clergy/geo-patrick",
+    "permanent": true
+  },
+  {
+    "source": "/fr-felix-philip",
+    "destination": "/clergy/felix-philip",
+    "permanent": true
+  },
+  {
+    "source": "/fr-francis-michael",
+    "destination": "/clergy/francis-michael",
+    "permanent": true
+  },
+  {
+    "source": "/fr-eucharist-f-j-x",
+    "destination": "/clergy/eucharist-f-j-x",
+    "permanent": true
+  },
+  {
+    "source": "/fr-edward-selvaraj-j",
+    "destination": "/clergy/edward-selvaraj-j",
+    "permanent": true
+  },
+  {
+    "source": "/fr-edward-santhosh-kumar-m",
+    "destination": "/clergy/edward-santhosh-kumar-m",
+    "permanent": true
+  },
+  {
+    "source": "/fr-edward-raj-s",
+    "destination": "/clergy/edward-raj-s",
+    "permanent": true
+  },
+  {
+    "source": "/fr-christhu-raj-o-j",
+    "destination": "/clergy/christhu-raj-o-j",
+    "permanent": true
+  },
+  {
+    "source": "/fr-clement-balasamy-t",
+    "destination": "/clergy/clement-balasamy-t",
+    "permanent": true
+  },
+  {
+    "source": "/fr-chinnappa-carasala",
+    "destination": "/clergy/chinnappa-carasala",
+    "permanent": true
+  },
+  {
+    "source": "/fr-charles-p",
+    "destination": "/clergy/charles-p",
+    "permanent": true
+  },
+  {
+    "source": "/fr-charles-kumar-n-a",
+    "destination": "/clergy/charles-kumar-n-a",
+    "permanent": true
+  },
+  {
+    "source": "/fr-charles-david-immanuel",
+    "destination": "/clergy/charles-david-immanuel",
+    "permanent": true
+  },
+  {
+    "source": "/fr-charles-anandaraj-f",
+    "destination": "/clergy/charles-anandaraj-f",
+    "permanent": true
+  },
+  {
+    "source": "/fr-bosco-y-f",
+    "destination": "/clergy/bosco-y-f",
+    "permanent": true
+  },
+  {
+    "source": "/fr-bernard-lawrence",
+    "destination": "/clergy/bernard-lawrence",
+    "permanent": true
+  },
+  {
+    "source": "/fr-austin-jose-albert-d",
+    "destination": "/clergy/austin-jose-albert-d",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arul-jesu-doss-k",
+    "destination": "/clergy/arul-jesu-doss-k",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arputhasamy-m-s",
+    "destination": "/clergy/arputhasamy-m-s",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arokia-velankanni-stalin",
+    "destination": "/clergy/arokia-velankanni-stalin",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arokiaraj-y-s",
+    "destination": "/clergy/arokiaraj-y-s",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arokiaraj-r",
+    "destination": "/clergy/arokiaraj-r",
+    "permanent": true
+  },
+  {
+    "source": "/fr-antony-doss-l",
+    "destination": "/clergy/antony-doss-l",
+    "permanent": true
+  },
+  {
+    "source": "/fr-anthonysamy-g-j",
+    "destination": "/clergy/anthonysamy-g-j",
+    "permanent": true
+  },
+  {
+    "source": "/fr-anthony-raj-v",
+    "destination": "/clergy/anthony-raj-v",
+    "permanent": true
+  },
+  {
+    "source": "/fr-anthony-raj-b-i",
+    "destination": "/clergy/anthony-raj-b-i",
+    "permanent": true
+  },
+  {
+    "source": "/fr-anthony-raj-t",
+    "destination": "/clergy/anthony-raj-t",
+    "permanent": true
+  },
+  {
+    "source": "/fr-anthony-b",
+    "destination": "/clergy/anthony-b",
+    "permanent": true
+  },
+  {
+    "source": "/fr-andrew-dominic",
+    "destination": "/clergy/andrew-dominic",
+    "permanent": true
+  },
+  {
+    "source": "/fr-ambrose-c-c",
+    "destination": "/clergy/ambrose-c-c",
+    "permanent": true
+  },
+  {
+    "source": "/fr-albert-jude-j",
+    "destination": "/clergy/albert-jude-j",
+    "permanent": true
+  },
+  {
+    "source": "/fr-a-amal-raj-2",
+    "destination": "/clergy/a-amal-raj",
+    "permanent": true
+  },
+  {
+    "source": "/fr-albert-benedict-nathan-r",
+    "destination": "/clergy/albert-benedict-nathan-r",
+    "permanent": true
+  },
+  {
+    "source": "/priest",
+    "destination": "/clergy",
+    "permanent": true
+  },
+  {
+    "source": "/fr-a-amal-raj",
+    "destination": "/clergy/a-amal-raj",
+    "permanent": true
+  },
+  {
+    "source": "/shrine",
+    "destination": "/parishes",
+    "permanent": true
+  },
+  {
+    "source": "/parish",
+    "destination": "/parishes",
+    "permanent": true
+  },
+  {
+    "source": "/others-3",
+    "destination": "/others",
+    "permanent": true
+  },
+  {
+    "source": "/others-2",
+    "destination": "/others",
+    "permanent": true
+  },
+  {
+    "source": "/cbci-links-2",
+    "destination": "/cbci-links",
+    "permanent": true
+  },
+  {
+    "source": "/video-gallery%ef%bf%bc",
+    "destination": "/video-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/fr-benjamin-soosai-s",
+    "destination": "/clergy/benjamin-soosai-s",
+    "permanent": true
+  },
+  {
+    "source": "/fr-balraj-s",
+    "destination": "/clergy/balraj-s",
+    "permanent": true
+  },
+  {
+    "source": "/fr-balasamy-m",
+    "destination": "/clergy/balasamy-m",
+    "permanent": true
+  },
+  {
+    "source": "/fr-asir-arputharajan-d",
+    "destination": "/clergy/asir-arputharajan-d",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arun-durai-a",
+    "destination": "/clergy/arun-durai-a",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arulappa-e",
+    "destination": "/clergy/arulappa-e",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arul-selvam-d",
+    "destination": "/clergy/arul-selvam-d",
+    "permanent": true
+  },
+  {
+    "source": "/fr-arul-raj-d",
+    "destination": "/clergy/arul-raj-d",
+    "permanent": true
+  },
+  {
+    "source": "/st-louis-church-%e0%ae%aa%e0%af%81%e0%ae%a9%e0%ae%bf%e0%ae%a4-%e0%ae%b2%e0%af%82%e0%ae%af%e0%ae%bf%e0%ae%b8%e0%af%8d-%e0%ae%86%e0%ae%b2%e0%ae%af%e0%ae%ae%e0%af%8d",
+    "destination": "/parishes/st-louis-church",
+    "permanent": true
+  },
+  {
+    "source": "/st-marks-catholic-church",
+    "destination": "/parishes/st-marks-catholic-church",
+    "permanent": true
+  },
+  {
+    "source": "/archdiocese-of-madras-mylapore-assignments-appointments-2023",
+    "destination": "/news/archdiocese-of-madras-mylapore-assignments-appointments-2023",
+    "permanent": true
+  },
+  {
+    "source": "/churches",
+    "destination": "/parishes",
+    "permanent": true
+  },
+  {
+    "source": "/deanery-of-the-sacred-heart-of-jesus",
+    "destination": "/news/deanery-of-the-sacred-heart-of-jesus",
+    "permanent": true
+  },
+  {
+    "source": "/deanery-of-our-lady-of-lourdes",
+    "destination": "/news/deanery-of-our-lady-of-lourdes",
+    "permanent": true
+  },
+  {
+    "source": "/welcome-to-archdiocese-of-mylapore",
+    "destination": "/news/welcome-to-archdiocese-of-mylapore",
+    "permanent": true
+  },
+  {
+    "source": "/deanery-of-st-john-the-baptist",
+    "destination": "/news/deanery-of-st-john-the-baptist",
+    "permanent": true
+  },
+  {
+    "source": "/our-lady-of-visitation-church",
+    "destination": "/parishes/our-lady-of-visitation-church",
+    "permanent": true
+  },
+  {
+    "source": "/the-dog-likeness-of-christ",
+    "destination": "/news/the-dog-likeness-of-christ",
+    "permanent": true
+  },
+  {
+    "source": "/our-church",
+    "destination": "/parishes",
+    "permanent": true
+  },
+  {
+    "source": "/7-ways-to-protect-and-pass-on-the-gospel",
+    "destination": "/news/7-ways-to-protect-and-pass-on-the-gospel",
+    "permanent": true
+  },
+  {
+    "source": "/is-there-forgiveness-for-a-seminary-student",
+    "destination": "/news/is-there-forgiveness-for-a-seminary-student",
+    "permanent": true
+  },
+  {
+    "source": "/objectively-create-quality-bandwidth",
+    "destination": "/news/objectively-create-quality-bandwidth",
+    "permanent": true
+  },
+  {
+    "source": "/church-urges-government-to-address-poverty",
+    "destination": "/news/church-urges-government-to-address-poverty",
+    "permanent": true
+  },
+  {
+    "source": "/join-us-as-we-celebrate-baptism",
+    "destination": "/news/join-us-as-we-celebrate-baptism",
+    "permanent": true
+  },
+  {
+    "source": "/event/international-workers-day",
+    "destination": "/events/international-workers-day",
+    "permanent": true
+  },
+  {
+    "source": "/event/international-workers-day-2",
+    "destination": "/events/international-workers-day-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/test",
+    "destination": "/events",
+    "permanent": true
+  },
+  {
+    "source": "/event/fbs-general-chapter-inauguration-mass-m",
+    "destination": "/events/fbs-general-chapter-inauguration-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/festal-mass-lowering-of-the-flag-e",
+    "destination": "/events/festal-mass-lowering-of-the-flag-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/ccbi-executive-meeting-online-m",
+    "destination": "/events/ccbi-executive-meeting-online-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/yesuve-nam-meetpar-retreat-mass-m",
+    "destination": "/events/yesuve-nam-meetpar-retreat-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/1st-death-anniversary-mass-of-late-archbishop-anandarayar-e",
+    "destination": "/events/1st-death-anniversary-mass-of-late-archbishop-anandarayar-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/chapel-blessing-mass-m",
+    "destination": "/events/chapel-blessing-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m",
+    "destination": "/events/visitors-by-appointment-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/bust-of-de-monte-blessing-platinum-jubilee-mass-e",
+    "destination": "/events/bust-of-de-monte-blessing-platinum-jubilee-mass-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/1st-profession-mass-ctc-sisters-m",
+    "destination": "/events/1st-profession-mass-ctc-sisters-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-st-lukes-e",
+    "destination": "/events/confirmation-st-lukes-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/festal-mass-confirmation-m",
+    "destination": "/events/festal-mass-confirmation-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/blessing-of-the-renovated-church-e",
+    "destination": "/events/blessing-of-the-renovated-church-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/fbs-final-profession-mass-m",
+    "destination": "/events/fbs-final-profession-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/trust-meeting-e",
+    "destination": "/events/trust-meeting-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-diaconate-ordination-m",
+    "destination": "/events/archdiocesan-diaconate-ordination-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-m",
+    "destination": "/events/visitors-priests-religious-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/fsj-general-chapter-concluding-mass-m",
+    "destination": "/events/fsj-general-chapter-concluding-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/canonization-propaganda-fide-meetings",
+    "destination": "/events/canonization-propaganda-fide-meetings",
+    "permanent": true
+  },
+  {
+    "source": "/event/1st-death-anniversary-mass-of-late-fr-s-j-anthonysamy-e",
+    "destination": "/events/1st-death-anniversary-mass-of-late-fr-s-j-anthonysamy-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/omi-priestly-ordination-m",
+    "destination": "/events/omi-priestly-ordination-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/may-day-celebration-e",
+    "destination": "/events/may-day-celebration-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/day-of-the-eucharist-mass",
+    "destination": "/events/day-of-the-eucharist-mass",
+    "permanent": true
+  },
+  {
+    "source": "/event/mass-crowning-of-our-blessed-mother",
+    "destination": "/events/mass-crowning-of-our-blessed-mother",
+    "permanent": true
+  },
+  {
+    "source": "/event/st-thomas-the-apostle-of-india-feast",
+    "destination": "/events/st-thomas-the-apostle-of-india-feast",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment",
+    "destination": "/events/visitors-by-appointment",
+    "permanent": true
+  },
+  {
+    "source": "/event/mass",
+    "destination": "/events/mass",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-2",
+    "destination": "/events/visitors-by-appointment-m-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-3",
+    "destination": "/events/visitors-by-appointment-m-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/salesian-priestly-ordination-e",
+    "destination": "/events/salesian-priestly-ordination-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/novena-mass-confirmation-m",
+    "destination": "/events/novena-mass-confirmation-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/sponsors-day-s-h-seminary-e",
+    "destination": "/events/sponsors-day-s-h-seminary-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-4",
+    "destination": "/events/visitors-by-appointment-m-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/senate-meeting-e",
+    "destination": "/events/senate-meeting-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/senate-meeting-e-2",
+    "destination": "/events/senate-meeting-e-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-m-2",
+    "destination": "/events/visitors-priests-religious-m-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/holy-spirit-mass-collegiate-seminary-e",
+    "destination": "/events/holy-spirit-mass-collegiate-seminary-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/black-day-demonstration-m",
+    "destination": "/events/black-day-demonstration-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/sacerdotal-golden-jubilee-mass-fr-simonraj-e",
+    "destination": "/events/sacerdotal-golden-jubilee-mass-fr-simonraj-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-works",
+    "destination": "/events/personal-works",
+    "permanent": true
+  },
+  {
+    "source": "/event/pastoral-course-s-h-seminary-m",
+    "destination": "/events/pastoral-course-s-h-seminary-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-e",
+    "destination": "/events/feast-mass-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-5",
+    "destination": "/events/visitors-by-appointment-m-5",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-priestly-ordination-e",
+    "destination": "/events/archdiocesan-priestly-ordination-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-m",
+    "destination": "/events/confirmation-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/eucharistic-day-confirmation-e",
+    "destination": "/events/eucharistic-day-confirmation-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-m-2",
+    "destination": "/events/confirmation-m-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-e",
+    "destination": "/events/confirmation-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-m-3",
+    "destination": "/events/visitors-priests-religious-m-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/novena-mass-e",
+    "destination": "/events/novena-mass-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/holy-spirit-mass-m",
+    "destination": "/events/holy-spirit-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-confirmation-e",
+    "destination": "/events/flag-hoisting-confirmation-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-works-2",
+    "destination": "/events/personal-works-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/benediction-mass-m",
+    "destination": "/events/benediction-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/silver-jubilee-mass-e",
+    "destination": "/events/silver-jubilee-mass-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/tancean-general-body-meeting",
+    "destination": "/events/tancean-general-body-meeting",
+    "permanent": true
+  },
+  {
+    "source": "/event/nuptial-mass-m",
+    "destination": "/events/nuptial-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-clergy-annual-retreat",
+    "destination": "/events/archdiocesan-clergy-annual-retreat",
+    "permanent": true
+  },
+  {
+    "source": "/event/guanellian-priestly-ordination-m",
+    "destination": "/events/guanellian-priestly-ordination-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/madha-social-communication-online-meeting-e",
+    "destination": "/events/madha-social-communication-online-meeting-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/prison-ministry-sunday-mass-m",
+    "destination": "/events/prison-ministry-sunday-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/nuptial-mass-m-2",
+    "destination": "/events/nuptial-mass-m-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-mass-e",
+    "destination": "/events/flag-hoisting-mass-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-m-4",
+    "destination": "/events/visitors-priests-religious-m-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-6",
+    "destination": "/events/visitors-by-appointment-m-6",
+    "permanent": true
+  },
+  {
+    "source": "/event/nuptial-mass-e",
+    "destination": "/events/nuptial-mass-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/mmi-priestly-ordination-m",
+    "destination": "/events/mmi-priestly-ordination-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/mass-madha-tv-m",
+    "destination": "/events/mass-madha-tv-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-m",
+    "destination": "/events/feast-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-e-2",
+    "destination": "/events/feast-mass-e-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-7",
+    "destination": "/events/visitors-by-appointment-m-7",
+    "permanent": true
+  },
+  {
+    "source": "/event/clergy-monthly-recollection-m",
+    "destination": "/events/clergy-monthly-recollection-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-8",
+    "destination": "/events/visitors-by-appointment-m-8",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-works-3",
+    "destination": "/events/personal-works-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-9",
+    "destination": "/events/visitors-by-appointment-m-9",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-e-3",
+    "destination": "/events/feast-mass-e-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-10",
+    "destination": "/events/visitors-by-appointment-m-10",
+    "permanent": true
+  },
+  {
+    "source": "/event/cmes-award-distribution-e",
+    "destination": "/events/cmes-award-distribution-e",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-m-3",
+    "destination": "/events/confirmation-m-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/cbci-meeting-m",
+    "destination": "/events/cbci-meeting-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/session-to-tertians-fihm-sisters-m",
+    "destination": "/events/session-to-tertians-fihm-sisters-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/ash-wednesday-mass-m",
+    "destination": "/events/ash-wednesday-mass-m",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-works-4",
+    "destination": "/events/personal-works-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-11",
+    "destination": "/events/visitors-by-appointment-m-11",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-12",
+    "destination": "/events/visitors-by-appointment-m-12",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-e-2",
+    "destination": "/events/confirmation-e-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-m-4",
+    "destination": "/events/confirmation-m-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-m-13",
+    "destination": "/events/visitors-by-appointment-m-13",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-m-5",
+    "destination": "/events/visitors-priests-religious-m-5",
+    "permanent": true
+  },
+  {
+    "source": "/event/madha-tv-holly-mass-am",
+    "destination": "/events/madha-tv-holly-mass-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/sog-thattipathiri-gnanamma-day-pm",
+    "destination": "/events/sog-thattipathiri-gnanamma-day-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/christmas-with-collaborators-pm",
+    "destination": "/events/christmas-with-collaborators-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/christmas-vigil-mass-pm",
+    "destination": "/events/christmas-vigil-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/salesians-priestly-ordination-pm",
+    "destination": "/events/salesians-priestly-ordination-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/mass-for-vgs-of-tamil-nadu-dioceses-am",
+    "destination": "/events/mass-for-vgs-of-tamil-nadu-dioceses-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-work",
+    "destination": "/events/personal-work",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am",
+    "destination": "/events/visitors-by-appointment-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/way-of-the-cross-pm",
+    "destination": "/events/way-of-the-cross-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-2",
+    "destination": "/events/visitors-by-appointment-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-pm",
+    "destination": "/events/feast-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-3",
+    "destination": "/events/visitors-by-appointment-am-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-4",
+    "destination": "/events/visitors-by-appointment-am-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/msss-ec-meeting-am",
+    "destination": "/events/msss-ec-meeting-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-work-am",
+    "destination": "/events/personal-work-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-5",
+    "destination": "/events/visitors-by-appointment-am-5",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-6",
+    "destination": "/events/visitors-by-appointment-am-6",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-pm-2",
+    "destination": "/events/feast-mass-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/75th-jubilee-mass-st-isabel-hospital-pm",
+    "destination": "/events/75th-jubilee-mass-st-isabel-hospital-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/consultors-meeting-am",
+    "destination": "/events/consultors-meeting-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/senate-meeting-pm",
+    "destination": "/events/senate-meeting-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-work-am-2",
+    "destination": "/events/personal-work-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-7",
+    "destination": "/events/visitors-by-appointment-am-7",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-8",
+    "destination": "/events/visitors-by-appointment-am-8",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-way-of-the-cross-pm",
+    "destination": "/events/archdiocesan-way-of-the-cross-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-am",
+    "destination": "/events/visitors-priests-religious-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/sanctification-day-clergy-recollection-am",
+    "destination": "/events/sanctification-day-clergy-recollection-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/chrism-mass-pm",
+    "destination": "/events/chrism-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/chrism-mass-pm-2",
+    "destination": "/events/chrism-mass-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/maundy-thursday-service-pm",
+    "destination": "/events/maundy-thursday-service-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/passion-friday-service-pm",
+    "destination": "/events/passion-friday-service-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/paschal-vigil-service-pm",
+    "destination": "/events/paschal-vigil-service-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/mass-kairos-nathional-youth-convention-2024-pm",
+    "destination": "/events/mass-kairos-nathional-youth-convention-2024-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/all-souls-day-mass-pm",
+    "destination": "/events/all-souls-day-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/pastrol-visit-am",
+    "destination": "/events/pastrol-visit-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/conferral-of-ministries-sh-seminary-am",
+    "destination": "/events/conferral-of-ministries-sh-seminary-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/regional-secrateris-meeting-madha-tv",
+    "destination": "/events/regional-secrateris-meeting-madha-tv",
+    "permanent": true
+  },
+  {
+    "source": "/event/consultors-meeting-senate-meeting",
+    "destination": "/events/consultors-meeting-senate-meeting",
+    "permanent": true
+  },
+  {
+    "source": "/event/eucharistic-congress",
+    "destination": "/events/eucharistic-congress",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-clergy-on-going-formation-pm",
+    "destination": "/events/archdiocesan-clergy-on-going-formation-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/clergy-monthly-recollection-requiem-mass-for-the-deceased-clergy",
+    "destination": "/events/clergy-monthly-recollection-requiem-mass-for-the-deceased-clergy",
+    "permanent": true
+  },
+  {
+    "source": "/event/blessing-of-the-developmental-office-am",
+    "destination": "/events/blessing-of-the-developmental-office-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/workshop-legal-cell-am",
+    "destination": "/events/workshop-legal-cell-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-9",
+    "destination": "/events/visitors-by-appointment-am-9",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-confirmation",
+    "destination": "/events/visitors-priests-religious-confirmation",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-work-2",
+    "destination": "/events/personal-work-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/meeting-am",
+    "destination": "/events/meeting-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-pm",
+    "destination": "/events/confirmation-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-am",
+    "destination": "/events/confirmation-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-10",
+    "destination": "/events/visitors-by-appointment-am-10",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-am-2",
+    "destination": "/events/visitors-priests-religious-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/prison-ministry-sunday-mass-am",
+    "destination": "/events/prison-ministry-sunday-mass-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-11",
+    "destination": "/events/visitors-by-appointment-am-11",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-am-3",
+    "destination": "/events/visitors-priests-religious-am-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-2",
+    "destination": "/events/visitors-by-appointment-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/diaconate-ordination-am",
+    "destination": "/events/diaconate-ordination-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-12",
+    "destination": "/events/visitors-by-appointment-am-12",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-mass-pm",
+    "destination": "/events/flag-hoisting-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/holy-mass-yeasuve-nam-meetpar-am",
+    "destination": "/events/holy-mass-yeasuve-nam-meetpar-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/feast-mass-mylai-madha-pm",
+    "destination": "/events/feast-mass-mylai-madha-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/renovated-church-blessing-pm",
+    "destination": "/events/renovated-church-blessing-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/episcopal-ordination-pm",
+    "destination": "/events/episcopal-ordination-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-priests-religious-am-4",
+    "destination": "/events/visitors-priests-religious-am-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/consultors-meeting-pm",
+    "destination": "/events/consultors-meeting-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-13",
+    "destination": "/events/visitors-by-appointment-am-13",
+    "permanent": true
+  },
+  {
+    "source": "/event/christmass-celebration-in-prison-am",
+    "destination": "/events/christmass-celebration-in-prison-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/workshop-ccbi-am",
+    "destination": "/events/workshop-ccbi-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/cri-christmas-celebration-christmas-with-inter-religious-groups-am",
+    "destination": "/events/cri-christmas-celebration-christmas-with-inter-religious-groups-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/renovated-church-blessing-pm-2",
+    "destination": "/events/renovated-church-blessing-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/novena-mass-pm",
+    "destination": "/events/novena-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-14",
+    "destination": "/events/visitors-by-appointment-am-14",
+    "permanent": true
+  },
+  {
+    "source": "/event/ec-meeting-christmas-celebration-msss-am",
+    "destination": "/events/ec-meeting-christmas-celebration-msss-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-clergy-recollection-christmas-gathering-am",
+    "destination": "/events/archdiocesan-clergy-recollection-christmas-gathering-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/150th-anniversary-of-thatipathri-gnanammas-heavenly-abode-pm",
+    "destination": "/events/150th-anniversary-of-thatipathri-gnanammas-heavenly-abode-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/religious-day-am",
+    "destination": "/events/religious-day-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/christmas-with-laity-commission-am",
+    "destination": "/events/christmas-with-laity-commission-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/archdiocesan-collaborators-christmas-get-together-pm",
+    "destination": "/events/archdiocesan-collaborators-christmas-get-together-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/ccbi-christmas-celebration",
+    "destination": "/events/ccbi-christmas-celebration",
+    "permanent": true
+  },
+  {
+    "source": "/event/vigil-mass-pm",
+    "destination": "/events/vigil-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/holy-mass-yeasuve-nam-meetpar-am-2",
+    "destination": "/events/holy-mass-yeasuve-nam-meetpar-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/inaguration-of-jubilee-year-2025",
+    "destination": "/events/inaguration-of-jubilee-year-2025",
+    "permanent": true
+  },
+  {
+    "source": "/event/vigil-mass-pm-2",
+    "destination": "/events/vigil-mass-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-15",
+    "destination": "/events/visitors-by-appointment-am-15",
+    "permanent": true
+  },
+  {
+    "source": "/event/meeting-higher-education-tancean-am",
+    "destination": "/events/meeting-higher-education-tancean-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-and-mass-pm",
+    "destination": "/events/flag-hoisting-and-mass-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-mass-am",
+    "destination": "/events/confirmation-mass-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/18th-convocation-day-st-josephs-dental-college",
+    "destination": "/events/18th-convocation-day-st-josephs-dental-college",
+    "permanent": true
+  },
+  {
+    "source": "/event/consultors-meeting-am-2",
+    "destination": "/events/consultors-meeting-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/blessing-of-new-convent-ssam-pm",
+    "destination": "/events/blessing-of-new-convent-ssam-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-work-3",
+    "destination": "/events/personal-work-3",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-16",
+    "destination": "/events/visitors-by-appointment-am-16",
+    "permanent": true
+  },
+  {
+    "source": "/event/inaguration-of-golden-jubilee-st-peters-pontifical-institute",
+    "destination": "/events/inaguration-of-golden-jubilee-st-peters-pontifical-institute",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-mass-am-2",
+    "destination": "/events/confirmation-mass-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/visitors-by-appointment-am-17",
+    "destination": "/events/visitors-by-appointment-am-17",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-mass-pm-2",
+    "destination": "/events/flag-hoisting-mass-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/personal-work-4",
+    "destination": "/events/personal-work-4",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-confirmation-pm",
+    "destination": "/events/flag-hoisting-confirmation-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/seminar-to-ssam-am",
+    "destination": "/events/seminar-to-ssam-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/novena-mass-confirmation-pm",
+    "destination": "/events/novena-mass-confirmation-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-am-2",
+    "destination": "/events/confirmation-am-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-pm-2",
+    "destination": "/events/confirmation-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/tnbc-half-yearly-meeting",
+    "destination": "/events/tnbc-half-yearly-meeting",
+    "permanent": true
+  },
+  {
+    "source": "/event/inaguraion-of-the-centinial-year-icm-sisters-am",
+    "destination": "/events/inaguraion-of-the-centinial-year-icm-sisters-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/flag-hoisting-confirmation-pm-2",
+    "destination": "/events/flag-hoisting-confirmation-pm-2",
+    "permanent": true
+  },
+  {
+    "source": "/event/platinum-jubilee-rosarian-mat-hr-school-am",
+    "destination": "/events/platinum-jubilee-rosarian-mat-hr-school-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/confirmation-mass-bell-tower-blessing-pm",
+    "destination": "/events/confirmation-mass-bell-tower-blessing-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/inaguration-of-catechism-childrens-jubilee-am",
+    "destination": "/events/inaguration-of-catechism-childrens-jubilee-am",
+    "permanent": true
+  },
+  {
+    "source": "/event/sponsors-day-sacred-heart-seminary-pm",
+    "destination": "/events/sponsors-day-sacred-heart-seminary-pm",
+    "permanent": true
+  },
+  {
+    "source": "/event/36th-plenary-assembly-of-ccbi",
+    "destination": "/events/36th-plenary-assembly-of-ccbi",
+    "permanent": true
+  }
+]

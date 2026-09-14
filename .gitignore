@@ -1,0 +1,62 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# The working database. It holds 46 priests' personal telephone numbers, email
+# addresses, home addresses and dates of birth, none of which is public on the
+# site. It must never be committed. The demo runs on demo-data/diocese.db,
+# which is the same database with all of that emptied out — see
+# scripts/demo-prepare.ts.
+#
+# Anchored with a leading slash. Without it, git matches the name at every
+# level and quietly excludes demo-data/diocese.db too — which is the file the
+# demo deployment is built from, so the container would come up with no
+# content at all and nothing would say why.
+/diocese.db
+/diocese.db-*
+
+# /media and /documents ARE committed. Every file in them is already published
+# on the site — parish photographs, clergy portraits, the downloadable forms
+# and the newsletter issues — and the demo host has to be able to serve them.
+# About 78 MB between them.
+
+# WordPress migration cache
+.migration/

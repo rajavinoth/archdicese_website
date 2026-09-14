@@ -1,0 +1,32 @@
+# The working database and the working upload directories are NOT in here:
+# `demo-data/`, `media/` and `documents/` all have to reach the image.
+#
+# What must never reach it is the real database. It holds 46 priests' personal
+# telephone numbers, email addresses, home addresses and dates of birth — see
+# scripts/demo-prepare.ts. The demo runs on the sanitised copy in demo-data/.
+diocese.db
+diocese.db-shm
+diocese.db-wal
+
+# Stated explicitly. Docker matches these patterns against the whole path, so
+# the three lines above do not touch this file — but the equivalent rule in
+# .gitignore did, and being sure is cheap.
+!demo-data/diocese.db
+
+# Secrets.
+.env
+.env.*
+!.env.example
+
+# Rebuilt inside the image.
+node_modules
+.next
+*.tsbuildinfo
+next-env.d.ts
+
+# Local-only.
+.git
+.claude
+.migration
+worksheet
+README.md
