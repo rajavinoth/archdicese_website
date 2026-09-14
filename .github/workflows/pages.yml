@@ -50,6 +50,14 @@ jobs:
       # and link points one directory too high.
       - uses: actions/configure-pages@v5
         id: pages
+        with:
+          # Turns Pages on if it is not on already. Without this the action
+          # only *reads* the setting, and a run that happens before anyone has
+          # been to Settings > Pages fails with "Get Pages site failed... Not
+          # Found" — which reads like a missing file rather than a setting
+          # nobody has touched yet. This is also what makes the repository work
+          # when it is forked.
+          enablement: true
 
       - name: Build the static export
         env:
